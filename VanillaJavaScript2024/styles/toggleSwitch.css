@@ -1,0 +1,98 @@
+/* Importing Google Fonts */
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../assets/fonts/Roboto/RobotoRegular.ttf");
+}
+
+/* Declaration of Font Variables */
+
+:root {
+  --primaryFont: "RobotoRegular";
+}
+
+/* Declaration of Color Variables */
+
+:root {
+  --primaryColor: #646cff;
+  --secondaryColor: #535bf2;
+  --tertiaryColor: #242424;
+  --quaternaryColor: #ffffff;
+  --quinaryColor: #f9f9f9;
+  --senaryColor: #747bff;
+  --septenaryColor: #213547;
+  --octonaryColor: #000000;
+  --nonaryColor: #000000;
+  --decenaryColor: #000000;
+  --undenaryColor: #000000;
+  --dark: black;
+}
+
+/* Declaration of Default Stylings */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+/* Declaration of Global Classes Stylings */
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+/* Declaration of UI Specific Stylings */
+
+.heading {
+  font-family: var(--primaryFont);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+.toggleSwitch {
+  background-color: var(--quinaryColor);
+  border-radius: 50px;
+  box-shadow: 0 0 10px 10px var(--dark);
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+}
+
+.switchBtn {
+  background-color: var(--primaryColor);
+  border-radius: 100%;
+  height: 50px;
+  transition: transform 0.3s ease-in;
+  width: 50px;
+}
+
+.mode {
+  font-family: var(--primaryFont);
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 60px;
+  text-align: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+@media screen and (max-width: 768px) {
+  .heading,
+  .mode {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
