@@ -7,10 +7,15 @@ let startButton = document.getElementById("startButtonId");
 let pauseButton = document.getElementById("pauseButtonId");
 let resetButton = document.getElementById("resetButtonId");
 
+startButton.addEventListener("click", startTimer);
+pauseButton.addEventListener("click", pauseTimer);
+resetButton.addEventListener("click", resetTimer);
+
+let clock;
+
 function startTimer() {
   let currentTime = Math.floor(new Date().getTime() / 1000);
-  console.log(currentTime);
-  setInterval(function () {
+  clock = setInterval(function () {
     let newTime = Math.floor(new Date().getTime() / 1000);
     let timeDiff = newTime - currentTime;
     let hours = Math.floor(timeDiff / 3600);
@@ -21,4 +26,15 @@ function startTimer() {
     secondsTime.innerHTML = seconds;
   }, 1000);
 }
-document.addEventListener("click", startTimer);
+
+function pauseTimer() {
+  clearInterval(clock);
+  pauseButton.innerText = "Resume";
+}
+
+function resetTimer() {
+  clearInterval(clock);
+  hoursTime.innerHTML = "00";
+  minutesTime.innerHTML = "00";
+  secondsTime.innerHTML = "00";
+}

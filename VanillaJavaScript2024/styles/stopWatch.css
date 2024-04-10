@@ -63,9 +63,10 @@ a {
 }
 
 .stopWatchContainer {
-  padding: 20px;
+  padding: 40px 60px;
   background: cyan;
   border-radius: 10px;
+  box-shadow: 0 0 10px 10px gray;
 }
 
 .timerDisplay {
@@ -74,7 +75,7 @@ a {
   padding: 10px;
   font-weight: bold;
   background-color: deeppink;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 8px;
 }
 
@@ -86,13 +87,14 @@ a {
 
 .time {
   padding: 10px;
-  font-size: 40px;
+  font-size: 60px;
+  min-width: 80px;
 }
 
 .colon {
   padding: 10px;
   font-size: 40px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .button {
@@ -102,7 +104,7 @@ a {
   cursor: pointer;
   outline: none;
   border: none;
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 600;
   margin-right: 10px;
 }
